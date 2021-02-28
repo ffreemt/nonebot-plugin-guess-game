@@ -12,8 +12,8 @@ pip install nonebot-plugin-guess
 ```
 or
 ```bash
-poetr add nonebot-plugin-guess
-# poetr add nonebot-plugin-guess@latest   # 升级到最新版
+poetry add nonebot-plugin-guess
+# poetry add nonebot-plugin-guess@latest   # 升级到最新版
 ```
 or clone [https://github.com/ffreemt/nonebot-plugin-guess-game](https://github.com/ffreemt/nonebot-plugin-guess-game) and install from the repo.
 
@@ -30,10 +30,10 @@ nonebot.load_plugin("nonebot_plugin_guess")
 
 插件自带的游戏数据仅限“猜城市名” 及固定的城市名："上海", "北京", "广州", "深圳", "香港", "雅典", "西安", "长沙", "多伦多", "旧金山", "Zurich", "约翰内斯堡"; 最多猜的次数： 4
 
-如需自己定制游戏，可在`.env` (或`env.prod`或`env.dev`) 里加入：
+如需自己定制游戏，可在`.env` 里加入：
 ```bash
 # .env
 guess_name = "人名"
 guess_max = 3
 guess_data = ["贾宝玉", "林黛玉"，]
-
+```

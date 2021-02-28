@@ -7,7 +7,7 @@ repository = "https://github.com/ffreemt/nonebot-plugin-guess-game"
 
 [tool.poetry.dependencies]
 python = "^3.7.3"
-nonebot2 = "2.0.0a10"
+nonebot2 = "^2.0.0-alpha.10"
 logzero = "^1.6.3"
 pydantic = "1.7.3"
 

@@ -73,7 +73,7 @@ async def process(state: Optional[dict] = None):
 
     if city not in state and idx < LIMIT:
         _ = choice(["", "错", "错了", "猜错了", "不对", "完全不对"])
-        r_msg = f"{_ + '，' * bool(_)}请重新输入。 还有{LIMIT - idx}次机会"
+        r_msg = f"{_ + ', ' * bool(_)}请重新输入。 还有{LIMIT - idx}次机会"
         if LIMIT - idx < 2:
             r_msg = f'{r_msg}，{choice(["加油！", "要好好想一想了", "别乱猜了啊", "再猜错就玩完"])}'
         await guess.reject(r_msg)
@@ -95,7 +95,7 @@ async def handle(bot: Bot, event: Event, state: dict):
     global city
     city = choice(NAME_LIST)
     logger.info(f"\n\t==> 谜底： {city}")
-    await guess.send(f"猜一个{NAME}名，你有{LIMIT}次机会")
+    await guess.send(f"猜一个{NAME}，你有{LIMIT}次机会")
 
 
 @guess.receive()

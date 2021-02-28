@@ -5,7 +5,7 @@ from pydantic import BaseSettings, Field
 
 
 class Settings(BaseSettings):
-    name: str = "城市"
+    name: str = "城市名"
     limit: int = 4
     # fmt: off
     name_list: List[str] = Field(default_factory=lambda: [
