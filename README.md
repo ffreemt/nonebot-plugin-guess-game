@@ -35,5 +35,5 @@ nonebot.load_plugin("nonebot_plugin_guess")
 # .env
 guess_name = "人名"
 guess_max = 3
-guess_data = ["贾宝玉", "林黛玉"，]
+guess_name_list = ["贾宝玉", "林黛玉"，]
 ```
