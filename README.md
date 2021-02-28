@@ -1,6 +1,6 @@
 # nonebot-plugin-guess
 
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![PyPI version](https://badge.fury.io/py/nonebot-plugin-guess-game.svg)](https://badge.fury.io/py/nonebot-plugin-guess-game)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![PyPI version](https://badge.fury.io/py/nonebot-plugin-guess.svg)](https://badge.fury.io/py/nonebot-plugin-guess)
 
 《猜猜看》nonebot2插件（Guess a name plugin for nonebot2）
 
