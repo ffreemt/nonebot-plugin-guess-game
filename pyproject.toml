@@ -3,6 +3,8 @@ name = "nonebot-plugin-guess"
 version = "0.1.0"
 description = "nobebot2插件《猜猜看》"
 authors = ["freemt"]
+license = "MIT"
+readme = "README.md"
 repository = "https://github.com/ffreemt/nonebot-plugin-guess-game"
 
 [tool.poetry.dependencies]
