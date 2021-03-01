@@ -16,8 +16,15 @@ class Settings(BaseSettings):
     ])
     # fmt: on
 
+    @validator("limit")
+    def validate_limit(cls, i):
+        if i < 1:
+            logger.warning(" limit = %s < 1 makes no sense, setting to 1.", i)
+            i = 1
+        return i
+
     @validator("name_list")
-    def not_longer_than_seven(cls, v):
+    def validate_namelist(cls, v):
         res = []
         for elm in v:
             try:
