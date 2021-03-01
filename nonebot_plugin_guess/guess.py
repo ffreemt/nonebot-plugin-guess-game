@@ -9,7 +9,8 @@ from packaging import version
 from logzero import logger
 
 from nonebot import on_command, __version__
-from nonebot.rule import to_me
+
+# from nonebot.rule import to_me
 from nonebot.adapters.cqhttp import Bot, Event
 from nonebot_plugin_guess.config import Settings
 
@@ -24,7 +25,7 @@ config = Settings()
 # fmt: off
 guess = on_command(
     "guess",
-    aliases={'cai', '猜猜看', '猜',},
+    aliases={'cai', '猜猜看', '猜', },
     priority=5,
 )
 # fmt: on
@@ -49,7 +50,7 @@ city = ""
 
 # fmt: off
 switch = {
-    ...,  #  for future use
+    ...,  # for future use
 }
 # fmt: on
 
@@ -65,8 +66,7 @@ async def process(state: Optional[dict] = None):
 
     # fmt: off
     _ = ["/guess", "/exit", "exit",
-        "退出", "不玩了", "菠萝菠萝蜜"
-    ]
+         "退出", "不玩了", "菠萝菠萝蜜"]
     # fmt: on
     if any([elm in state for elm in _]):
         await guess.finish("……（退出游戏）")
