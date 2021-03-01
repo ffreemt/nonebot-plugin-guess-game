@@ -12,6 +12,7 @@ python = "^3.7.3"
 nonebot2 = "^2.0.0-alpha.10"
 logzero = "^1.6.3"
 pydantic = "1.7.3"
+python-dotenv = "^0.15.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

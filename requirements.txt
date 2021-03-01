@@ -1,0 +1,22 @@
+certifi==2020.12.5
+click==7.1.2
+colorama==0.4.4; sys_platform == "win32"
+fastapi==0.63.0
+h11==0.9.0
+httpcore==0.12.3
+httptools==0.1.1; sys_platform != "win32" and sys_platform != "cygwin" and platform_python_implementation != "PyPy"
+httpx==0.16.1
+idna==3.1
+loguru==0.5.3
+logzero==1.6.3
+nonebot2==2.0.0a10
+pydantic==1.7.3
+pygtrie==2.4.2
+python-dotenv==0.15.0
+rfc3986==1.4.0
+sniffio==1.2.0
+starlette==0.13.6
+uvicorn==0.11.8
+uvloop==0.15.2; sys_platform != "win32" and sys_platform != "cygwin" and platform_python_implementation != "PyPy"
+websockets==8.1
+win32-setctime==1.0.3; sys_platform == "win32"
