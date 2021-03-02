@@ -46,7 +46,7 @@ class Settings(BaseSettings):
 
             if len(elm) == 0:
                 logger.warning(
-                    "This entry [%s] is empty: probably not what you want, but we pass.",
+                    "This entry [%s] is empty: probably not what you want, but we let it pass.",
                     elm,
                 )
 
