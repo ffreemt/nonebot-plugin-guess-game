@@ -8,8 +8,14 @@ from logzero import logger
 
 class Settings(BaseSettings):
     name: str = "城市名"
-    limit: int = 4
     # fmt: off
+    limit: int = Field(
+        4,
+        lt=8,
+        gt=-1,
+        description="max number of guesses",
+        title="limit"
+    )
     name_list: List[str] = Field(default_factory=lambda: [
         "", "上海", "北京", "广州", "深圳", "香港", "雅典",
         "西安", "长沙", "多伦多", "旧金山", "Zurich", "约翰内斯堡",
@@ -40,7 +46,7 @@ class Settings(BaseSettings):
 
             if len(elm) == 0:
                 logger.warning(
-                    "This empty entry [%s]: probably not what you want, but we pass.",
+                    "This entry [%s] is empty: probably not what you want, but we pass.",
                     elm,
                 )
 
