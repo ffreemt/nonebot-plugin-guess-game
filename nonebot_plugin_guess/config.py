@@ -14,7 +14,7 @@ class Settings(BaseSettings):
         lt=8,
         gt=-1,
         description="max number of guesses",
-        title="limit"
+        title="limit",
     )
     name_list: List[str] = Field(default_factory=lambda: [
         "", "上海", "北京", "广州", "深圳", "香港", "雅典",
@@ -41,7 +41,7 @@ class Settings(BaseSettings):
 
             if len(elm) > 7:
                 raise ValueError(
-                    "Each entry must be shorter than 8, this entry [%s] too short" % elm
+                    "Each entry must be shorter than 8, this entry [%s] too long" % elm
                 )
 
             if len(elm) == 0:
@@ -53,7 +53,7 @@ class Settings(BaseSettings):
             res.append(elm)
 
         if len(res) < 2:
-            raise ValueError("The namelist should be at least 2.")
+            raise ValueError("The name_list length should be at least 2.")
 
         return res
 
