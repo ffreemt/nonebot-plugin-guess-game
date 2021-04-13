@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot-plugin-guess"
-version = "0.1.1"
+version = "0.1.2"
 description = "nobebot2插件《猜猜看》"
 authors = ["freemt"]
 license = "MIT"
@@ -11,13 +11,14 @@ repository = "https://github.com/ffreemt/nonebot-plugin-guess-game"
 python = "^3.7.3"
 nonebot2 = "^2.0.0-alpha.10"
 logzero = "^1.6.3"
-pydantic = "1.7.3"
-python-dotenv = "^0.15.0"
+pydantic = {extras = ["dotenv"], version = "^1.8.1"}
+python-dotenv = "^0.17.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 ipython = "^7.21.0"
 flake8 = "^3.8.4"
+tbump = "^6.3.1"
 
 [build-system]
 requires = ["poetry>=0.12"]

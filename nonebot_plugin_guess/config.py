@@ -64,3 +64,5 @@ class Settings(BaseSettings):
         # extra = "allow"
         env_file = ".env"
         env_file_encoding = "utf-8"
+
+        logger.info("env_prefix: %s, env_file: %s", env_prefix, env_file)
