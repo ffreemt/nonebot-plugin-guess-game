@@ -3,6 +3,8 @@
 
 《猜猜看》nonebot2插件（Guess a name plugin for nonebot2）
 
+Field-tested with ``nonebot 2.0.0a13.post1``
+
 ## 安装
 
 ```bash

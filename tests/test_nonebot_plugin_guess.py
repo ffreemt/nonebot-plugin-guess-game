@@ -1,5 +1,6 @@
 """Test Sanity."""
 import nonebot
+
 nonebot.init()
 
 from nonebot_plugin_guess import __version__  # noqa: E402

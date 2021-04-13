@@ -4,5 +4,11 @@
   "main": "index.js",
   "repository": "git@github.com:ffreemt/nonebot-plugin-guess-game.git",
   "author": "freemt",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+  "start": "pyright && pytest && yarn style",
+  "test": "nodemon -w tests -w nonebot_plugin_guess -x pytest tests",
+  "pyright": "nodemon -w nonebot_plugin_guess -w .venv -e .py -x pyright nonebot_plugin_guess tests",
+  "style": "nodemon -w nonebot_plugin_guess -w tests -x \"black tests nonebot_plugin_guess && python -m flake8\""
+  }
 }
