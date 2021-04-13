@@ -1,6 +1,9 @@
 """Test config.py."""
+import nonebot
 import pytest
-from nonebot_plugin_guess.config import Settings
+
+nonebot.init()
+from nonebot_plugin_guess.config import Settings  # noqa: E402
 
 
 def test_settings():
