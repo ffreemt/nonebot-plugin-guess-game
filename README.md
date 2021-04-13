@@ -17,6 +17,14 @@ or
 poetry add nonebot-plugin-guess
 # poetry add nonebot-plugin-guess@latest   # 升级到最新版
 ```
+or
+```
+poetry add git+https://github.com/ffreemt/nonebot-plugin-guess-game.git
+```
+or
+```
+pip install git+https://github.com/ffreemt/nonebot-plugin-guess-game.git
+```
 or clone [https://github.com/ffreemt/nonebot-plugin-guess-game](https://github.com/ffreemt/nonebot-plugin-guess-game) and install from the repo.
 
 ## 使用
