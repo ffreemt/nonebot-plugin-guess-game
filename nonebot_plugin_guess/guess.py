@@ -3,7 +3,7 @@ from typing import Optional
 
 from pathlib import Path
 from random import choice
-from packaging import version
+# from packaging import version
 
 # import logzero
 from logzero import logger
@@ -14,8 +14,8 @@ from nonebot import on_command, __version__
 from nonebot.adapters.cqhttp import Bot, Event
 from nonebot_plugin_guess.config import Settings
 
-_ = f"该插件需要 nonebot2，你的nonebot为{__version__}"
-assert version.parse(__version__).major > 1, _
+# _ = f"该插件需要 nonebot2，你的nonebot为{__version__}"
+# assert version.parse(__version__).major > 1, _
 
 config = Settings()
 # logzero.loglevel(10)
