@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot-plugin-guess"
-version = "0.1.3"
+version = "0.1.4"
 description = "nobebot2插件《猜猜看》"
 authors = ["freemt"]
 license = "MIT"
