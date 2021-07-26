@@ -25,6 +25,7 @@ jobs:
           poetry install  # --no-dev
           python3 -m pip install pip -U
           pip install nonebot2 -U  # fetch post1
+          pip show nonebot
       - name: Run pytest
         run: |
           poetry run flake8
