@@ -5,7 +5,7 @@ from pathlib import Path
 from random import choice
 # from packaging import version
 
-# import logzero
+import logzero
 from logzero import logger
 
 from nonebot import on_command, __version__
@@ -18,7 +18,7 @@ from nonebot_plugin_guess.config import Settings
 # assert version.parse(__version__).major > 1, _
 
 config = Settings()
-# logzero.loglevel(10)
+logzero.loglevel(20)
 
 # guess = on_command("guess", rule=to_me(), priority=5)
 # guess = on_command("guess", priority=5)
