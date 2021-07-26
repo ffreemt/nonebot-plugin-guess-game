@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot-plugin-guess"
-version = "0.1.4"
+version = "0.1.5"
 description = "nobebot2插件《猜猜看》"
 authors = ["freemt"]
 license = "MIT"
@@ -15,7 +15,6 @@ pydantic = {extras = ["dotenv"], version = "^1.8.1"}
 python-dotenv = "^0.19.0"
 nonebot-adapter-cqhttp = "^2.0.0-alpha.13"
 nonebot2 = "^2.0.0-alpha.13"
-tbump = "^6.3.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
