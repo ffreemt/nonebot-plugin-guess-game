@@ -239,23 +239,30 @@ nonebot2 = ">=2.0.0-alpha.13,<3.0.0"
 
 [[package]]
 name = "nonebot2"
-version = "2.0.0a13"
+version = "2.0.0a13.post1"
 description = "An asynchronous python bot framework."
 category = "main"
 optional = false
-python-versions = ">=3.7.3,<4.0.0"
+python-versions = "^3.7.3"
+develop = false
 
 [package.dependencies]
-fastapi = ">=0.63.0,<0.64.0"
-loguru = ">=0.5.1,<0.6.0"
-pydantic = {version = ">=1.8.0,<1.9.0", extras = ["dotenv"]}
-pygtrie = ">=2.4.1,<3.0.0"
-tomlkit = ">=0.7.0,<0.8.0"
-uvicorn = {version = ">=0.13.0,<0.14.0", extras = ["standard"]}
+fastapi = "^0.63.0"
+loguru = "^0.5.1"
+pydantic = {version = "~1.8.0", extras = ["dotenv"]}
+pygtrie = "^2.4.1"
+tomlkit = "^0.7.0"
+uvicorn = {version = "^0.13.0", extras = ["standard"]}
 
 [package.extras]
 quart = ["Quart (>=0.14.1,<0.15.0)"]
 all = ["Quart (>=0.14.1,<0.15.0)"]
+
+[package.source]
+type = "git"
+url = "https://github.com/nonebot/nonebot2.git"
+reference = "master"
+resolved_reference = "86806955860302bcbfcb4d3a2de016557a7ada52"
 
 [[package]]
 name = "packaging"
@@ -556,7 +563,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7.3"
-content-hash = "c3e73741d26e6c22ae481610d296b849441b373babc0906eeb948b2f72c9073b"
+content-hash = "3d737460ee5b19c8495f71d5ae5bc063bcef64e783e24ef6008e2b4204f8dec3"
 
 [metadata.files]
 atomicwrites = [
@@ -700,10 +707,7 @@ nonebot-adapter-cqhttp = [
     {file = "nonebot-adapter-cqhttp-2.0.0a13.tar.gz", hash = "sha256:906891c318d394d358331c15ed6d8b1a6a4df75d9ceb43a2d0115ebfb204b5d2"},
     {file = "nonebot_adapter_cqhttp-2.0.0a13-py3-none-any.whl", hash = "sha256:17ec3217cdd884c0b76d72cfd994b8cc877d4c7140993c6e7a83f9c562729091"},
 ]
-nonebot2 = [
-    {file = "nonebot2-2.0.0a13-py3-none-any.whl", hash = "sha256:08422f31e42a705270a0c0dd5704febc9c929f4e7b9e94146c56faf926733536"},
-    {file = "nonebot2-2.0.0a13.tar.gz", hash = "sha256:61f59fac17ca5f238802045ec34d58faeaf9be9a1aa4bc33fadb132c0679a9f6"},
-]
+nonebot2 = []
 packaging = [
     {file = "packaging-21.0-py3-none-any.whl", hash = "sha256:c86254f9220d55e31cc94d69bade760f0847da8000def4dfe1c6b872fd14ff14"},
     {file = "packaging-21.0.tar.gz", hash = "sha256:7dc96269f53a4ccec5c0670940a4281106dd0bb343f47b7471f779df49c2fbe7"},
