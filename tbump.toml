@@ -26,8 +26,6 @@ tag_template = "v{new_version}"
 src = "*/__init__.py"
 [[file]]
 src = "package.json"
-[[file]]
-src = "tests/test_*.py"
 
 # You can specify a list of commands to
 # run after the files have been patched
