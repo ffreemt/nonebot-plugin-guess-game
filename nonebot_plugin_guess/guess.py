@@ -8,7 +8,7 @@ from random import choice
 import logzero
 from logzero import logger
 
-from nonebot import on_command, __version__
+from nonebot import on_command  # , __version__
 
 # from nonebot.rule import to_me
 from nonebot.adapters.cqhttp import Bot, Event

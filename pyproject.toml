@@ -15,6 +15,9 @@ pydantic = {extras = ["dotenv"], version = "^1.8.1"}
 python-dotenv = "^0.19.0"
 nonebot-adapter-cqhttp = "^2.0.0-alpha.13"
 nonebot2 = "^2.0.0-alpha.13"
+pytz = "^2021.1"
+pyquery = "^1.4.3"
+joblib = "^1.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
