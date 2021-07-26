@@ -23,8 +23,9 @@ jobs:
       - name: install packages
         run: |
           poetry install  # --no-dev
-          # python3 -m pip install pip -U
+          python3 -m pip install pip -U
           # pip install nonebot2 -U  # fetch post1 git+https
+          pip install git+https://github.com/nonebot/nonebot2.git
           pip show nonebot2
       - name: Run pytest
         run: |
