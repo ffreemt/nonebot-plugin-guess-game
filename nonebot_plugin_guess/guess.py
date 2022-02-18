@@ -1,5 +1,6 @@
 """Guess a city name."""
 from typing import Optional
+from nonebot.typing import T_State
 
 from pathlib import Path
 from random import choice
@@ -93,7 +94,8 @@ async def process(state: Optional[dict] = None):
 
 
 @guess.handle()
-async def handle(bot: Bot, event: Event, state: dict):
+# async def handle(bot: Bot, event: Event, state: dict):
+async def handle(bot: Bot, event: Event, state: T_State):
     global city
     city = choice(NAME_LIST)
     logger.info(f"\n\t==> 谜底： {city}")
@@ -101,7 +103,7 @@ async def handle(bot: Bot, event: Event, state: dict):
 
 
 @guess.receive()
-async def receive(bot: Bot, event: Event, state: dict):
+async def receive(bot: Bot, event: Event, state: T_State):
 
     args = str(event.message).strip()
     state[args] = 1
