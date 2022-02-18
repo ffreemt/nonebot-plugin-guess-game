@@ -11,7 +11,9 @@ from logzero import logger
 from nonebot import on_command  # , __version__
 
 # from nonebot.rule import to_me
-from nonebot.adapters.cqhttp import Bot, Event
+
+# from nonebot.adapters.cqhttp import Bot, Event
+from nonebot.adapters.onebot.v11 import Bot, Event
 from nonebot_plugin_guess.config import Settings
 
 # _ = f"该插件需要 nonebot2，你的nonebot为{__version__}"
