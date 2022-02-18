@@ -1,4 +1,6 @@
 """Config guess."""
+# pylint: disable=invalid-name)
+
 from typing import List
 
 from pydantic import BaseSettings, Field, validator
@@ -7,6 +9,7 @@ from logzero import logger
 
 
 class Settings(BaseSettings):
+    """Config."""
     name: str = "城市名"
     # fmt: off
     limit: int = Field(
@@ -23,14 +26,16 @@ class Settings(BaseSettings):
     # fmt: on
 
     @validator("limit")
-    def validate_limit(cls, i):
+    def validate_limit(cls, i):  # pylint:  disable=no-self-argument, no-self-use
+        """Validate limit."""
         if i < 1:
             logger.warning(" limit = %s < 1 makes no sense, setting to 1.", i)
             i = 1
         return i
 
     @validator("name_list")
-    def validate_namelist(cls, v):
+    def validate_namelist(cls, v):  # pylint:  disable=no-self-argument, no-self-use
+        """Validate namelist."""
         res = []
         for elm in v:
             try:
@@ -41,7 +46,7 @@ class Settings(BaseSettings):
 
             if len(elm) > 7:
                 raise ValueError(
-                    "Each entry must be shorter than 8, this entry [%s] too long" % elm
+                    f"Each entry must be shorter than 8, this entry [{elm}] too long"
                 )
 
             if len(elm) == 0:

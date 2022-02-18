@@ -1,6 +1,7 @@
 """Guess a city name."""
+# pylint: disable=invalid-name, global-statement, unused-argument
+
 from typing import Optional
-from nonebot.typing import T_State
 
 from pathlib import Path
 from random import choice
@@ -10,9 +11,9 @@ import logzero
 from logzero import logger
 
 from nonebot import on_command  # , __version__
+from nonebot.typing import T_State
 
 # from nonebot.rule import to_me
-
 # from nonebot.adapters.cqhttp import Bot, Event
 from nonebot.adapters.onebot.v11 import Bot, Event
 from nonebot_plugin_guess.config import Settings
@@ -59,6 +60,7 @@ switch = {
 
 
 async def process(state: Optional[dict] = None):
+    """Create aux func."""
     global idx
     idx += 1
 
@@ -71,7 +73,7 @@ async def process(state: Optional[dict] = None):
     _ = ["/guess", "/exit", "exit",
          "退出", "不玩了", "菠萝菠萝蜜"]
     # fmt: on
-    if any([elm in state for elm in _]):
+    if any(elm in state for elm in _):
         await guess.finish("……（退出游戏）")
 
     if city not in state and idx < LIMIT:
@@ -96,15 +98,16 @@ async def process(state: Optional[dict] = None):
 @guess.handle()
 # async def handle(bot: Bot, event: Event, state: dict):
 async def handle(bot: Bot, event: Event, state: T_State):
+    """Process first run."""
     global city
     city = choice(NAME_LIST)
-    logger.info(f"\n\t==> 谜底： {city}")
+    logger.info("\n\t==> 谜底： %s", city)
     await guess.send(f"猜一个{NAME}，你有{LIMIT}次机会")
 
 
 @guess.receive()
 async def receive(bot: Bot, event: Event, state: T_State):
-
+    """Process received messages."""
     args = str(event.message).strip()
     state[args] = 1
 
