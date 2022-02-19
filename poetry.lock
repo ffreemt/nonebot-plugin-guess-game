@@ -54,7 +54,7 @@ tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>
 
 [[package]]
 name = "click"
-version = "8.0.3"
+version = "8.0.4"
 description = "Composable command line interface toolkit"
 category = "main"
 optional = false
@@ -244,35 +244,28 @@ nonebot2 = ">=2.0.0-beta.1,<3.0.0"
 
 [[package]]
 name = "nonebot2"
-version = "2.0.0-beta.2"
+version = "2.0.0b2"
 description = "An asynchronous python bot framework."
 category = "main"
 optional = false
-python-versions = "^3.7.3"
-develop = false
+python-versions = ">=3.7.3,<4.0.0"
 
 [package.dependencies]
-fastapi = "^0.73.0"
-loguru = "^0.6.0"
-pydantic = {version = "~1.9.0", extras = ["dotenv"]}
-pygtrie = "^2.4.1"
-tomlkit = "^0.9.0"
+fastapi = ">=0.73.0,<0.74.0"
+loguru = ">=0.6.0,<0.7.0"
+pydantic = {version = ">=1.9.0,<1.10.0", extras = ["dotenv"]}
+pygtrie = ">=2.4.1,<3.0.0"
+tomlkit = ">=0.9.0,<0.10.0"
 typing-extensions = ">=3.10.0,<5.0.0"
-uvicorn = {version = "^0.17.0", extras = ["standard"]}
-yarl = "^1.7.2"
+uvicorn = {version = ">=0.17.0,<0.18.0", extras = ["standard"]}
+yarl = ">=1.7.2,<2.0.0"
 
 [package.extras]
 quart = ["Quart (>=0.16.0,<0.17.0)"]
-httpx = ["httpx[http2] (>=0.20.0,<1.0.0)"]
-aiohttp = ["aiohttp[speedups] (>=3.7.4,<4.0.0)"]
+all = ["Quart (>=0.16.0,<0.17.0)", "websockets (>=10.0,<11.0)", "aiohttp[speedups] (>=3.7.4,<4.0.0)", "httpx[http2] (>=0.20.0,<1.0.0)"]
 websockets = ["websockets (>=10.0,<11.0)"]
-all = ["Quart (>=0.16.0,<0.17.0)", "aiohttp[speedups] (>=3.7.4,<4.0.0)", "httpx[http2] (>=0.20.0,<1.0.0)", "websockets (>=10.0,<11.0)"]
-
-[package.source]
-type = "git"
-url = "https://github.com/nonebot/nonebot2.git"
-reference = "master"
-resolved_reference = "12313204e1aea1b7089f1195fadc7b96821ce70e"
+aiohttp = ["aiohttp[speedups] (>=3.7.4,<4.0.0)"]
+httpx = ["httpx[http2] (>=0.20.0,<1.0.0)"]
 
 [[package]]
 name = "packaging"
@@ -581,7 +574,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7.3"
-content-hash = "46153ed81d379d0447b6b9c019e088e6be817e8a5048aa570b475dcfc6bf580e"
+content-hash = "5b999a8ba3a5b5d048da58b2b95c453b0a2768bc89b10ec3b324745c0d5889c0"
 
 [metadata.files]
 anyio = [
@@ -601,8 +594,8 @@ attrs = [
     {file = "attrs-21.4.0.tar.gz", hash = "sha256:626ba8234211db98e869df76230a137c4c40a12d72445c45d5f5b716f076e2fd"},
 ]
 click = [
-    {file = "click-8.0.3-py3-none-any.whl", hash = "sha256:353f466495adaeb40b6b5f592f9f91cb22372351c84caeb068132442a4518ef3"},
-    {file = "click-8.0.3.tar.gz", hash = "sha256:410e932b050f5eed773c4cda94de75971c89cdb3155a72a0831139a79e5ecb5b"},
+    {file = "click-8.0.4-py3-none-any.whl", hash = "sha256:6a7a62563bbfabfda3a38f3023a1db4a35978c0abd76f6c9605ecd6554d6d9b1"},
+    {file = "click-8.0.4.tar.gz", hash = "sha256:8458d7b1287c5fb128c90e23381cf99dcde74beaf6c7ff6384ce84d6fe090adb"},
 ]
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
@@ -806,7 +799,10 @@ nonebot-adapter-onebot = [
     {file = "nonebot-adapter-onebot-2.0.0b1.tar.gz", hash = "sha256:9dad770371e577fead096ceacacc43b3ef304a8e238e8fff1163eefc4e947a75"},
     {file = "nonebot_adapter_onebot-2.0.0b1-py3-none-any.whl", hash = "sha256:ca1375de1dd503a5ab20440445026195b587e05a2b18ae8df9b6ab17c9e857b5"},
 ]
-nonebot2 = []
+nonebot2 = [
+    {file = "nonebot2-2.0.0b2-py3-none-any.whl", hash = "sha256:8166490311b607f8fbf5e31934b005e29f6d39ff222a6771ec36c9456ec337ec"},
+    {file = "nonebot2-2.0.0b2.tar.gz", hash = "sha256:2950f27a62f2a98b2abf3128c19d898a24c2867e70fb5c6af231eadf558b18a8"},
+]
 packaging = [
     {file = "packaging-21.3-py3-none-any.whl", hash = "sha256:ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522"},
     {file = "packaging-21.3.tar.gz", hash = "sha256:dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"},
