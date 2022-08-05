@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot-plugin-guess"
-version = "0.1.7"
+version = "0.1.8"
 description = "nobebot2插件《猜猜看》"
 authors = ["freemt"]
 license = "MIT"
@@ -12,7 +12,6 @@ python = "^3.7.3"
 # nonebot2 = "^2.0.0a13.post1"
 logzero = "^1.6.3"
 pydantic = {extras = ["dotenv"], version = "^1.8.1"}
-python-dotenv = "^0.19.0"
 pytz = "^2021.1"
 pyquery = "^1.4.3"
 joblib = "^1.0.1"
